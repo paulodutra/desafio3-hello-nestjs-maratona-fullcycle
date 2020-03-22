@@ -1,0 +1,15 @@
+version: '3'
+services:
+  desafio-nestjs-maratona:
+    container_name: 'desafio-nestjs-maratona'
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    working_dir: /var/www
+    ports:
+      - 8080:3000
+    volumes:
+      - ./:/var/www
+volumes:
+  desafio-nestjs-maratona:
+    driver: "local"  
